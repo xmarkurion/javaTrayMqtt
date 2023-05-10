@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="trayMqttt:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/trayMqttt_jar</output-path>
+    <root id="archive" name="trayMqttt.jar">
+      <element id="module-output" name="trayMqttt" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/miglayout/miglayout/3.7.4/miglayout-3.7.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/eclipse/paho/org.eclipse.paho.client.mqttv3/1.2.1/org.eclipse.paho.client.mqttv3-1.2.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

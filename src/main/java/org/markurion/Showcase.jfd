@@ -1,0 +1,109 @@
+JFDML JFormDesigner: "8.0.4.0.266" Java: "17.0.4.1" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+				name: "dialogPane"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+					"$layoutConstraints": "insets dialog,alignx right"
+					"$columnConstraints": "[button,fill][button,fill]"
+					"$rowSpecs": "[fill]"
+				} ) {
+					name: "buttonBar"
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "btn_hide"
+						"text": "Hide"
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "btn_hideMouseClicked", true ) )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 0 0"
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "cancelButton"
+						"text": "EXIT"
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "cancelButtonMouseClicked", true ) )
+					}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+						"value": "cell 1 0"
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "South"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {par l {seq {space ::8:x, par l {comp textField_status::l:::x, seq t {space :0:2:x, par t {seq {comp label3:::p:65:p, space :::p, comp textField_password:::p:123:p}, seq {comp label2:::p:90:p, space :::p, comp textField_login:::p:123:p}}, space u:::p, par l {comp btn_Connect:::p:226:p, comp btn_Save:::p:226:p}}, seq l {comp label1:::p::p, space u:::p, comp textField_ip:::p:361:p}}}, seq {space :::p, comp label_light:::p:83:p, space u:::p, par l {comp btn_on:::p:143:p, comp btn_off:::p:143:p}, space :0:223:x}}, space :::p}}"
+					"$verticalGroup": "par l {seq l {space :::p, par b {comp label1::b:p:31:p, comp textField_ip::b:p::p}, space :::p, par b {comp textField_login::b:p::p, comp label2::b:p:31:p, comp btn_Connect::b:p::p}, space :::p, par b {comp textField_password::b:p::p, comp label3::b:p:31:p, comp btn_Save::b:p::p}, space :::p, comp textField_status:::p:43:p, par l:::p {seq {space :p:9:p, comp btn_on:::p::p, space :::x, comp btn_off:::p::p}, seq {space :::p, comp label_light:::p:69:p}}, space ::11:x}}"
+				} ) {
+					name: "panel1"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label1"
+						"text": "MQTT-Server-IP"
+						"horizontalAlignment": 4
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField_ip"
+						"horizontalAlignment": 0
+						"font": new java.awt.Font( "Segoe UI", 0, 16 )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label2"
+						"text": "Login"
+						"horizontalAlignment": 4
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField_login"
+						"horizontalAlignment": 0
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label3"
+						"text": "Password"
+						"horizontalAlignment": 4
+					} )
+					add( new FormComponent( "javax.swing.JPasswordField" ) {
+						name: "textField_password"
+						"horizontalAlignment": 0
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "textField_status"
+						"text": "Status"
+						"font": new java.awt.Font( "Segoe UI", 0, 20 )
+						"horizontalAlignment": 0
+						"editable": false
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "btn_Connect"
+						"text": "Connect"
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "btn_ConnectMouseClicked", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "btn_Save"
+						"text": "Save configuration"
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "btn_SaveMouseClicked", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label_light"
+						"icon": new com.jformdesigner.model.SwingIcon( 0, "/icons/light_off.png" )
+						"horizontalAlignment": 0
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "btn_on"
+						"text": "ON"
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "btn_onMouseClicked", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "btn_off"
+						"text": "OFF"
+						addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "btn_offMouseClicked", true ) )
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "Center"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 475, 330 )
+		} )
+	}
+}
