@@ -1,6 +1,7 @@
-package org.example;
+package org.markurion;
 
 import java.awt.event.*;
+
 import net.miginfocom.swing.MigLayout;
 import org.eclipse.paho.client.mqttv3.MqttException;
 
@@ -44,6 +45,11 @@ public class Showcase extends JFrame {
 
         //Hide to tray
         dispose();
+
+        //Print config location
+        configFile.printCurrentWorkingPropertyFileLocation();
+        System.out.println(System.getProperty("user.dir"));
+
     }
 
     public void MainFrmae(){
@@ -92,6 +98,7 @@ public class Showcase extends JFrame {
     private void btn_onMouseClicked(MouseEvent e) {
         System.out.println("Light on btn clicked");
         mqtt.lightOn();
+        textField_status.setText("Signal ON sent.");
     }
 
     private void lightOnWithDelay(int delay){
@@ -132,7 +139,9 @@ public class Showcase extends JFrame {
         String login = textField_login.getText();
         String password = String.valueOf(textField_password.getPassword());
 
-        configFile.setAll(ip,login,password);
+        if(configFile.setAll(ip,login,password)){
+            textField_status.setText("Values saved!");
+        }
         readConfig();
     }
 

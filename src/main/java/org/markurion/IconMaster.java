@@ -1,4 +1,4 @@
-package org.example;
+package org.markurion;
 
 import java.awt.*;
 import java.net.URL;

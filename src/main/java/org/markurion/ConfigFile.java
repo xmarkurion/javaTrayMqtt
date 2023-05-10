@@ -1,9 +1,10 @@
-package org.example;
+package org.markurion;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Objects;
 import java.util.Properties;
 
 class ConfigFileException extends Exception{
@@ -21,8 +22,11 @@ public class ConfigFile {
      * Constructor with default file
      */
     ConfigFile(){
-       rootPath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
+      rootPath = Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResource("")).getPath();
+     // rootPath = this.getClass().getResource("").getPath();
+        System.out.println(rootPath);
        defaultConfigPath = rootPath + "data/config.properties";
+      // defaultConfigPath = Main.class.getResourceAsStream("data/config.properties");
        loadProperties();
     }
 
