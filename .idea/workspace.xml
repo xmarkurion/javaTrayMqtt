@@ -9,15 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="234a4374-a6a2-49d1-bbb2-e3527bb678a1" name="Changes" comment="Coments">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/trayMqttt_jar/trayMqttt.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/M.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="234a4374-a6a2-49d1-bbb2-e3527bb678a1" name="Changes" comment="Fin">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/markurion/ConfigFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/markurion/ConfigFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +149,7 @@
       <workItem from="1683732487379" duration="1271000" />
       <workItem from="1683748810107" duration="6401000" />
       <workItem from="1683762937100" duration="3612000" />
-      <workItem from="1683793256375" duration="4865000" />
+      <workItem from="1683793256375" duration="5630000" />
     </task>
     <task id="LOCAL-00001" summary="Coments">
       <created>1683754780636</created>
@@ -165,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683754780636</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fin">
+      <created>1683800234469</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683800234469</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +190,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Coments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Coments" />
+    <MESSAGE value="Fin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fin" />
   </component>
 </project>
