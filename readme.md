@@ -1,7 +1,7 @@
 <p align="center"><img src="http://www.markurion.eu/wp-content/uploads/2017/01/unnamed.gif"></p>
 
 # MQTT Java App for turning light on and off when needed
-###### If you want to run it please look at the instruction in how to section.
+###### If you want to run it get yourself [Full JDK Liberica 20](https://bell-sw.com/pages/downloads/)
 
 ## Why ? 
 This app was done for purpose to switch pc light on or off.
