@@ -1,10 +1,6 @@
 package org.markurion;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Objects;
+import java.io.*;
 import java.util.Properties;
 
 class ConfigFileException extends Exception{
@@ -13,8 +9,10 @@ class ConfigFileException extends Exception{
 }
 
 public class ConfigFile {
-    private String rootPath;
+    private String configFilePath;
     private String defaultConfigPath;
+
+    private InputStream inputStream;
     private Properties properties;
     private Boolean propertiesLoaded;
 
@@ -22,36 +20,42 @@ public class ConfigFile {
      * Constructor with default file
      */
     ConfigFile(){
-      rootPath = Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResource("")).getPath();
-     // rootPath = this.getClass().getResource("").getPath();
-        System.out.println(rootPath);
-       defaultConfigPath = rootPath + "data/config.properties";
-      // defaultConfigPath = Main.class.getResourceAsStream("data/config.properties");
-       loadProperties();
+        // Set config file is data
+        String appDir = System.getProperty("user.dir");
+        configFilePath = appDir + "\\" + "config.properties";
+
+        // Create config file if one does not exist
+        checkConfigFileSetup();
+
+        // Initialize Properties
+        loadProperties();
     }
 
     /**
-     * Construction with file
-     * @param configFilePath
+     * If config file does not exist outside of jar create an empty config file.
      */
-    ConfigFile(String configFilePath){
-        rootPath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
-        defaultConfigPath = rootPath + configFilePath;
-        loadProperties();
+    private void checkConfigFileSetup() {
+        if (!new File(configFilePath).isFile()) {
+            try{
+                FileOutputStream fo = new FileOutputStream(configFilePath);
+            }catch (FileNotFoundException e){
+                System.out.println(e.getMessage());
+            }
+        }
     }
 
     /**
      * Print's where config file is located
      */
     public void printCurrentWorkingPropertyFileLocation(){
-        System.out.println("Config file location: " + defaultConfigPath);
+        System.out.println("Config file location: " + configFilePath);
     }
 
     /**
      * Loads properties to the class variable.
      */
     public void loadProperties(){
-        try(FileInputStream input = new FileInputStream(defaultConfigPath);){
+        try(FileInputStream input = new FileInputStream(configFilePath)){
             properties = new Properties();
             properties.load(input);
             propertiesLoaded = true;
@@ -101,27 +105,10 @@ public class ConfigFile {
      */
     public void save() throws IOException, ConfigFileException {
         if(propertiesLoaded){
-            properties.store(new FileWriter(defaultConfigPath), null);
+            FileOutputStream fo = new FileOutputStream(configFilePath);
+            properties.store(fo, null);
         }else{
             throw new ConfigFileException("Properties were not loaded.");
-        }
-    }
-
-    public static void main(String[] args){
-        ConfigFile configFile = new ConfigFile();
-        try{
-            String ip = configFile.getProperty("ic");
-            System.out.println(ip);
-        } catch (ConfigFileException e) {
-            try{
-                configFile.setProperty("ic", "123.123.2324.43");
-                configFile.save();
-            } catch (ConfigFileException ex) {
-                System.out.println(ex.toString());
-            } catch (IOException ex) {
-                throw new RuntimeException(ex);
-            }
-            throw new RuntimeException(e);
         }
     }
 }

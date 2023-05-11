@@ -9,19 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="234a4374-a6a2-49d1-bbb2-e3527bb678a1" name="Changes" comment="">
+    <list default="true" id="234a4374-a6a2-49d1-bbb2-e3527bb678a1" name="Changes" comment="Coments">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/trayMqttt_jar/trayMqttt.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/M.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/markurion/ConfigFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/markurion/ConfigFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/markurion/IconMaster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/markurion/IconMaster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/markurion/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/markurion/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/markurion/MainGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/markurion/MainGui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/markurion/MqttHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/markurion/MqttHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/markurion/MyConfigFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/markurion/MyConfigFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/markurion/Showcase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/markurion/Showcase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/markurion/TrayGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/markurion/TrayGui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/icons/bulb.gif" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,8 +154,18 @@
       <workItem from="1683663003771" duration="8943000" />
       <workItem from="1683710844569" duration="18226000" />
       <workItem from="1683732487379" duration="1271000" />
-      <workItem from="1683748810107" duration="4575000" />
+      <workItem from="1683748810107" duration="6401000" />
+      <workItem from="1683762937100" duration="3612000" />
+      <workItem from="1683793256375" duration="4865000" />
     </task>
+    <task id="LOCAL-00001" summary="Coments">
+      <created>1683754780636</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683754780636</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,5 +187,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Coments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Coments" />
   </component>
 </project>
