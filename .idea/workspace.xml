@@ -11,10 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="234a4374-a6a2-49d1-bbb2-e3527bb678a1" name="Changes" comment="Fin">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/markurion/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/markurion/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/markurion/MainGui.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/markurion/Showcase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/markurion/Showcase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/markurion/TrayGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/markurion/TrayGui.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +151,7 @@
       <workItem from="1683762937100" duration="3612000" />
       <workItem from="1683793256375" duration="6252000" />
       <workItem from="1683981402338" duration="337000" />
-      <workItem from="1684015403655" duration="3249000" />
+      <workItem from="1684015403655" duration="4167000" />
     </task>
     <task id="LOCAL-00001" summary="Coments">
       <created>1683754780636</created>
