@@ -2,7 +2,7 @@ package org.markurion;
 
 public class Main {
     public static void main(String[] args) {
-        Showcase showcase = new Showcase();
+        Showcase showcase = Showcase.getInstance();
     }
 
 }

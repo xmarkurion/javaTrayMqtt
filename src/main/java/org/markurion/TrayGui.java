@@ -2,14 +2,12 @@ package org.markurion;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class TrayGui {
-    JFrame window;
+    Showcase window;
     Image image;
 
-    public TrayGui(JFrame window, Image image){
+    public TrayGui(Showcase window, Image image){
         this.window = window;
         this.image = image;
         this.window.setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
@@ -21,29 +19,8 @@ public class TrayGui {
 
         TrayIcon trayIcon = new TrayIcon(image);
         trayIcon.setImageAutoSize(true);
+        trayIcon.setPopupMenu( mainPopUpMenu() );
 
-        PopupMenu popupMenu = new PopupMenu();
-
-        MenuItem show = new MenuItem("Show");
-        show.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                window.setVisible(true);
-            }
-        });
-
-        MenuItem exit = new MenuItem("Exit");
-        exit.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.exit(0);
-            }
-        });
-
-        popupMenu.add(show);
-        popupMenu.add(exit);
-
-        trayIcon.setPopupMenu(popupMenu);
         try{
             systemTray.add(trayIcon);
         }catch (Exception e){
@@ -51,9 +28,41 @@ public class TrayGui {
         }
     }
 
+    private PopupMenu mainPopUpMenu(){
+        PopupMenu popupMenu = new PopupMenu();
+        MenuItem show = new MenuItem("Show");
+        show.addActionListener(e -> window.setVisible(true));
+
+        MenuItem exit = new MenuItem("Exit");
+        exit.addActionListener(e -> System.exit(0) );
+
+        Font trayFont = new Font(Font.SANS_SERIF, Font.PLAIN, 24);
+        popupMenu.setFont(trayFont);
+
+        popupMenu.add(show);
+        popupMenu.addSeparator();
+        popupMenu.add( subActionnMenu() );
+
+        popupMenu.add(exit);
+        return popupMenu;
+    }
+
+    /**
+     * Creates action menu with on off comands
+     * @return Menu
+     */
+    private Menu subActionnMenu(){
+        Menu command = new Menu("Send command");
+
+        MenuItem turnOn = new MenuItem("ON");
+        turnOn.addActionListener(e -> window.mqtt.lightOn());
+
+        MenuItem turnOff = new MenuItem("OFF");
+        turnOff.addActionListener(e -> window.mqtt.lightOff());
+
+        command.add(turnOn);
+        command.add(turnOff);
+        return command;
+    }
+
 }
-
-
-//        String classpath = System.getProperty("java.class.path");
-////        String[] classPathValues = classpath.split(File.pathSeparator);
-////        System.out.println(Arrays.toString(classPathValues));

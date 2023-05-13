@@ -8,20 +8,27 @@ import org.eclipse.paho.client.mqttv3.MqttException;
 import java.awt.*;
 import javax.swing.*;
 
-/*
- * Created by JFormDesigner on Tue May 09 10:21:48 IST 2023
- */
+//  Aaaa why not let's use some Singleton design pattern cause why not...
 
 /**
  * @author M
  */
 public class Showcase extends JFrame {
+
+    // Singleton pattern object holder
+    private static Showcase instance;
     public MyConfigFile configFile;
     public MqttHandler mqtt;
     private final Image imageIcon;
 
+    public static Showcase getInstance(){
+        if ( instance == null ){
+            instance = new Showcase();
+        }
+        return instance;
+    }
 
-    public Showcase() {
+    private Showcase() {
         configFile = new MyConfigFile();
         imageIcon = new IconMaster("/icons/M.png").getImage();
 
@@ -37,11 +44,11 @@ public class Showcase extends JFrame {
         //Main part of application
         MainFrmae();
 
-        //Add tray icon and tray actions
-        handleTrayLogic();
-
         //Connect to mqtt
         connect();
+
+        //Add tray icon and tray actions
+        handleTrayLogic();
 
         //Hide to tray
         dispose();
@@ -127,7 +134,7 @@ public class Showcase extends JFrame {
             enableOrDisableButtonOnOff(true);
             lightOnWithDelay(1000);
         } catch (MqttException ex) {
-            textField_status.setText("Not Connected: " + ex.toString());
+            textField_status.setText("Not Connected save new settings. And restart.");
             enableOrDisableButtonOnOff(false);
             throw new RuntimeException(ex);
         }
