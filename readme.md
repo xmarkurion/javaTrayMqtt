@@ -4,9 +4,11 @@
 ###### If you want to run it get yourself [Full JDK Liberica 20](https://bell-sw.com/pages/downloads/)
 
 ## Why ? 
-This app was done for purpose to switch pc light on or off.
+This app was done for purpose to switch pc light on or off. 
 App it's able to store configuration file where server config 
 is kept, so you can modify and try on your own!
+
+See some of my [notes](/readme/notes.pdf) which i've made during the development.
 
 ## How this app works.
 1. Open it enter your mqtt server credentials
