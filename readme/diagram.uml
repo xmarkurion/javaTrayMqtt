@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="-664.5" y="44.5">org.markurion.Showcase</node>
+    <node x="-443.81428571428575" y="672.6057142857143">org.markurion.Main</node>
+    <node x="-406.0" y="-177.5">org.markurion.ConfigFileException</node>
+    <node x="-658.5" y="-417.5">org.markurion.LightSensor</node>
+    <node x="-665.5" y="-188.5">org.markurion.MqttHandler</node>
+    <node x="-844.0" y="-155.5">org.markurion.IconMaster</node>
+    <node x="-664.5" y="653.5">org.markurion.TrayGui</node>
+    <node x="-382.5" y="220.5">org.markurion.ConfigFile</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.markurion.Showcase" target="org.markurion.MqttHandler" relationship="CREATE">
+      <point x="-60.0" y="-258.5" />
+      <point x="-60.0" y="71.5" />
+    </edge>
+    <edge source="org.markurion.TrayGui" target="org.markurion.Showcase" relationship="TO_ONE">
+      <point x="40.0" y="-49.5" />
+      <point x="20.0" y="258.5" />
+    </edge>
+    <edge source="org.markurion.ConfigFile" target="org.markurion.ConfigFileException" relationship="CREATE">
+      <point x="0.0" y="-82.5" />
+      <point x="0.0" y="60.5" />
+    </edge>
+    <edge source="org.markurion.Showcase" target="org.markurion.MqttHandler" relationship="TO_ONE">
+      <point x="60.0" y="-258.5" />
+      <point x="60.0" y="71.5" />
+    </edge>
+    <edge source="org.markurion.Showcase" target="org.markurion.IconMaster" relationship="CREATE">
+      <point x="-60.0" y="-258.5" />
+      <point x="-609.0" y="23.0" />
+      <point x="-769.0" y="23.0" />
+      <point x="0.0" y="38.5" />
+    </edge>
+    <edge source="org.markurion.MqttHandler" target="org.markurion.LightSensor" relationship="CREATE">
+      <point x="0.0" y="-71.5" />
+      <point x="0.0" y="60.5" />
+    </edge>
+    <edge source="org.markurion.Showcase" target="org.markurion.TrayGui" relationship="CREATE">
+      <point x="-60.0" y="258.5" />
+      <point x="-40.0" y="-49.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="1.0875839630562554" showDependencies="true" x="-604.7300584993972" y="-82.2826537997588" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

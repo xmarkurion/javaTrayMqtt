@@ -33,3 +33,6 @@ Tray icon:
 ## Handle Node-red logic
 Now you can handle the logic in Node-Red or somewhere where you like to.
 ![nodered](/readme/nodered.png)
+
+## Bonus generated diagram
+![diagram](/readme/diagram.png)
