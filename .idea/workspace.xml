@@ -11,6 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="234a4374-a6a2-49d1-bbb2-e3527bb678a1" name="Changes" comment="Fin">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/markurion/ConfigFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/markurion/ConfigFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,9 +127,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.ConfigFile" />
         <item itemvalue="Application.MqttHandler" />
         <item itemvalue="Application.MyConfigFile" />
-        <item itemvalue="Application.ConfigFile" />
         <item itemvalue="Application.MainGui" />
       </list>
     </recent_temporary>
@@ -152,6 +153,7 @@
       <workItem from="1683793256375" duration="6252000" />
       <workItem from="1683981402338" duration="337000" />
       <workItem from="1684015403655" duration="4167000" />
+      <workItem from="1684054484000" duration="2774000" />
     </task>
     <task id="LOCAL-00001" summary="Coments">
       <created>1683754780636</created>

@@ -3,27 +3,59 @@ package org.markurion;
 import java.io.*;
 import java.util.Properties;
 
+/**
+ * ConfigFileException, you can get the val of exception from it.
+ */
 class ConfigFileException extends Exception{
+    private String value;
     ConfigFileException(){super();}
     ConfigFileException(String s){super(s);}
+    ConfigFileException(String message, String value){
+        super(message);
+        this.value = value;
+    }
+    public String getValueOfException(){return value;}
 }
 
 public class ConfigFile {
     private String configFilePath;
-    private String defaultConfigPath;
-
-    private InputStream inputStream;
     private Properties properties;
     private Boolean propertiesLoaded;
 
     /**
-     * Constructor with default file
+     * Constructor with default file config.properties
      */
     ConfigFile(){
         // Set config file is data
         String appDir = System.getProperty("user.dir");
         configFilePath = appDir + "\\" + "config.properties";
+        initialize();
+    }
 
+    /**
+     * Change name of configFile to what you want
+     * @param configFileName - yourName.properties
+     */
+    ConfigFile(String configFileName){
+        String appDir = System.getProperty("user.dir");
+        configFilePath = appDir + "\\" + configFileName;
+        initialize();
+    }
+
+    /**
+     * Provide full path to config file as well as name.
+     * @param filePatch like "c:\\config"
+     * @param configFileName like "setup.properties"
+     */
+    ConfigFile(String filePatch, String configFileName){
+        configFilePath = filePatch + "\\" + configFileName;
+        initialize();
+    }
+
+    /**
+     * Main methods that run's after object is created
+     */
+    private void initialize(){
         // Create config file if one does not exist
         checkConfigFileSetup();
 
@@ -76,7 +108,9 @@ public class ConfigFile {
         if( propertiesLoaded ) {
             String data = properties.getProperty(propertyKey);
             if( data == null ){
-                throw new ConfigFileException("Property: \"" + propertyKey + "\" does not exist!");
+                throw new ConfigFileException(
+                        "Property: \"" + propertyKey + "\" does not exist!",
+                        propertyKey);
             }
             return data;
         }else{
@@ -109,6 +143,15 @@ public class ConfigFile {
             properties.store(fo, null);
         }else{
             throw new ConfigFileException("Properties were not loaded.");
+        }
+    }
+
+    public static void main(String[] args){
+        ConfigFile a = new ConfigFile();
+        try {
+            a.getProperty("qqq");
+        } catch (ConfigFileException e) {
+            System.out.println("I don't see " + e.getValueOfException());
         }
     }
 }
